@@ -1,0 +1,11 @@
+.MainRow{
+    justify-content: space-evenly;
+    display: contents;
+}
+.MainContainer{
+    margin: 0;
+}
+.Forms
+{
+    margin-left: 100px !important;
+}
