@@ -3,11 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,Container,Button,Form,Row,InputGroup,Col} from 'react-bootstrap'
 import { FaSearch } from 'react-icons/fa';
 import './TopNavigation.css';
+import { Link } from 'react-router-dom';
 
 function TopNavigation() {
  return ( 
    <Navbar >
-    <Container className='MainContainer'>
+    <Container fluid>
      <Row className='MainRow' >
     <Col lg={2} gap={3}>
      <Navbar.Brand  className='BrandLogo'>
@@ -26,9 +27,11 @@ function TopNavigation() {
        <Form>
           <Form.Group>
           <Form.Control 
+         
           type="search" 
           placeholder="Search for products" 
-          className="me-auto"
+          className="px-4"
+          
           aria-label="Search"
           />
           </Form.Group>
@@ -36,14 +39,18 @@ function TopNavigation() {
        <Button bg='dark'variant='dark'><FaSearch/></Button>
        </InputGroup>
    </Col>
-   
-     <Col lg={1}>
-     <Button variant="outline-dark">Login</Button>{' '}
-     </Col>
-     <Col>
-     <Button variant="outline-dark">Signup</Button>
-     </Col>
+       
 
+          <Col lg={2} className="btnItems">
+     <Button variant="outline-dark" className="btnLogin">
+      <Link to ="Login">Login</Link>
+      </Button>{' '}
+      <Button variant="outline-dark">Signup</Button>
+     </Col>
+   
+
+   
+    
   
 </Row>
 </Container>

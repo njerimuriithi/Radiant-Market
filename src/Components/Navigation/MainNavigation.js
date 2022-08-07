@@ -1,19 +1,25 @@
 //import { Button } from 'bootstrap';
 import React from 'react'
 import {Navbar,Container,Nav,Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import {FaShoppingCart ,FaHeart } from 'react-icons/fa';
+import './MainNavigation.css'
+import AllCategories from '../../Pages/AllCategories';
 function MainNavigation() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar>
     <Container>
-      <Navbar.Brand href="#">All Categories</Navbar.Brand>
+      <Navbar.Brand >
+         <Link to="/" className="mx-3">All Categories</Link>
+      </Navbar.Brand>
       <Nav className="me-auto">
-        <Nav.Link href="#">Contact Us</Nav.Link>
-        <Nav.Link href="#">SolarLights</Nav.Link>
+          <Link to="SolarLights" className="mx-3">SolarLights</Link>
+        
+         <Link to="ContactUs" className="mx-3">Contact Us</Link>
       
       </Nav>
-      <Button><FaShoppingCart/></Button>{''}
-      <Button><FaHeart/></Button>
+      <FaShoppingCart className="Icon"/>
+      <FaHeart className="Icon"/>
     </Container>
   </Navbar>
   )

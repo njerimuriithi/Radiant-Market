@@ -9,3 +9,15 @@
 {
     margin-left: 100px !important;
 }
+.px-4
+ {
+width: 500px;
+}
+.btnItems
+{
+    padding-left: 60px;
+}
+.btnLogin
+{
+    margin-right: 20px;
+}
