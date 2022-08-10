@@ -10,6 +10,7 @@ import AllCategories from './Pages/AllCategories';
 import SolarLights from './Pages/SolarLights';
 import ContactUs from './Pages/ContactUs';
 import Login from './Pages/Login';
+import ErrorPage from './Pages/ErrorPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
     <Route path ="SolarLights" element ={<SolarLights/>}/>
     <Route path ="ContactUs" element ={<ContactUs/>}/>
     <Route path="Login" element={<Login/>}/>
+    <Route path="*" element={<ErrorPage/>}/>
   </Routes>
     </div>
   );
