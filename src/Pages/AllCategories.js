@@ -1,8 +1,11 @@
 import React from 'react'
+import ProductDetails from './ProductDetails'
 
 function AllCategories() {
   return (
-    <div>AllCategories Page</div>
+    <div>
+        <ProductDetails/>
+    </div>
   )
 }
 

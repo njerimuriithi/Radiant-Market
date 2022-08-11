@@ -7,19 +7,10 @@ import {useDispatch} from "react-redux";
 
 
 function SolarLights() {
-const dispatch = useDispatch(); 
 
-const loadItem = () =>{
-  dispatch(
-    detailActions.loadItem({
-        
-    })
-  )
-
-}
 
   return (
-<div onClick={loadItem}>
+<div >
   <ProductCard/>
 </div>
   )
