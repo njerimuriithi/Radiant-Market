@@ -18,9 +18,9 @@ const listItems = SolarProductList.map((item) =>
        {item.ProductName}
       </Card.Text>
       <Card.Title className ='PriceText'>{item.ProductPrice}</Card.Title>
-      <Card.Text className='PriceReduction'>{item.SubdizedPrice}</Card.Text>
+      <Card.Text className='PriceReduction'><s>{item.SubdizedPrice}</s></Card.Text>
       <span className='StarRating'>{item.StarRating}</span>
-      <Link to={`/seemore/${item.id}`}>see more</Link>
+      <Link to={`/seemore/${item.id}`}> more product detais</Link>
    
       </Card.Body>
     </Card>

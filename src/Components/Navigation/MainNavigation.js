@@ -4,7 +4,7 @@ import {Navbar,Container,Nav,Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import {FaShoppingCart ,FaHeart } from 'react-icons/fa';
 import './MainNavigation.css'
-import AllCategories from '../../Pages/AllCategories';
+//import AllCategories from '../../Pages/AllCategories';
 function MainNavigation() {
   return (
     <Navbar>

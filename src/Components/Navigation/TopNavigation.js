@@ -9,20 +9,24 @@ function TopNavigation() {
  return ( 
    <Navbar >
     <Container fluid>
-     <Row className='MainRow' >
-    <Col lg={2} gap={3}>
+     <Row   className='MainRow'  >
+      <Col lg={1} >
      <Navbar.Brand  className='BrandLogo'>
          <img  
          src={process.env.PUBLIC_URL +"./Assets/logo.png"}
          alt=''
          width='100px'
          height='100px'
-         />{''}
-         Radiant Market
-      </Navbar.Brand>
+         />
+    </Navbar.Brand>
     </Col>
+  
+<Col lg={1}  className ='txt1'>
+    <h2 className='brandName'>Radiant</h2>
+    <h3 className='Name text-end'>Market</h3>   
+   </Col>
 
-    <Col lg ={6}>
+    <Col lg ={6} >
        <InputGroup className='Forms'>
        <Form>
           <Form.Group>
@@ -39,15 +43,19 @@ function TopNavigation() {
        <Button bg='dark'variant='dark'><FaSearch/></Button>
        </InputGroup>
    </Col>
-       
+    
+     
 
-          <Col lg={2} className="btnItems">
-     <Button variant="outline-dark" className="btnLogin">
-      <Link to ="Login">Login</Link>
-      </Button>{' '}
-      <Button variant="outline-dark">Signup</Button>
-     </Col>
+          <Col lg={2} className="d-grid gap-2 d-md-flex justify-content-md-end ">
+     <Button variant="outline-dark " className='myButton'>
+      Login
+       
+      </Button>
+      <Button variant="outline-dark" className='myButton'>Signup</Button>
+      </Col>
    
+   
+        
 
    
     

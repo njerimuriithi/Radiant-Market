@@ -7,17 +7,79 @@
 }
 .Forms
 {
-    margin-left: 100px !important;
+    
+    align-items: center;
+
+
 }
 .px-4
  {
 width: 500px;
 }
-.btnItems
+.brandName
 {
-    padding-left: 60px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: -5px;
 }
-.btnLogin
+.Name
 {
-    margin-right: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: #f48c06;
+}
+.txt1
+{
+    margin-left: -150px;
+}
+
+.myButton {
+	box-shadow: -1px 0px 0px 0px #ebf2f5;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:15px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#f7f7f7;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 21px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b6178;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+@media only screen and (max-width:480px) 
+{
+    .brandName
+    {
+      width: 100px;
+        margin-left: 220px;
+        font-size: inherit;
+    
+
+    }
+
+    .Name{
+    
+        width: 75px;
+        margin-left: 215px;
+        font-size: 1.0rem;
+    
+
+    }
+    .BrandLogo{
+        
+    width: 50px;
+    height: 50px;
+
+    }
+    
 }

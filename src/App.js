@@ -12,6 +12,7 @@ import ContactUs from './Pages/ContactUs';
 import Login from './Pages/Login';
 import ErrorPage from './Pages/ErrorPage';
 import SeeMore from './Pages/SeeMore';
+import ProductDetails from './Pages/ProductDetails';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
     <Route path ="SolarLights" element ={<SolarLights/>}/>
     <Route path ="ContactUs" element ={<ContactUs/>}/>
     <Route path="Login" element={<Login/>}/>
-    <Route path="/seemore/:Itemid" element={<SeeMore/>}/>
+    <Route path="/seemore/:Itemid" element={<ProductDetails/>}/>
     <Route path="*" element={<ErrorPage/>}/>
   </Routes>
 

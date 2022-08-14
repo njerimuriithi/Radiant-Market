@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link ,useParams  } from 'react-router-dom';
-import {Card,Button} from 'react-bootstrap';
+//import {Card,Button} from 'react-bootstrap';
 import './ProductCard.css';
+import {Card ,Container,Row,Col,Button} from "react-bootstrap";
+import {FaFacebook,FaTwitter } from 'react-icons/fa';
+import './ProductDetails.css';
 import SolarProductList from '../ProductsList/LightingData';
 
 function SeeMore() {
@@ -19,28 +22,40 @@ console.log (typeof params.Itemid)
 
 const listItems = SolarProductList.map((item) =>
  ( item.id ===Number(params.Itemid) &&
- <Card className='MainCard'key={item.id}>
-      <Card.Img variant="top" src={item.ProductImage} />
-      <p>{item.id}</p>
-      <Card.Body>
-      <Card.Text className='MainText'>
-       {item.ProductName}
-      </Card.Text>
-      <Card.Title className ='PriceText'>{item.ProductPrice}</Card.Title>
-      <Card.Text className='PriceReduction'>{item.SubdizedPrice}</Card.Text>
-      <Card.Text>{item.Description}</Card.Text>
-      <span className='StarRating'>{item.StarRating}</span>
-     
-   
-      </Card.Body>
-    </Card>
+ <Card>
+ <Container fluid>
+    <Row>
+         <Col lg={2}>
+           </Col>
+           <Col lg={3}>
+       <Card.Img variant="top" src={item.ProductImage} className ='img' />
+       </Col>
+       <Col lg ={6}>
+       <Card.Body>
+   <Card.Title>{item.ProductImage}</Card.Title>
+   <Card.Title>{item.ProductPrice}      <span>Stars</span></Card.Title>
+       <Button className='btn'>Buy Now!</Button>{' '}
+   <Button  >Add Item to Cart</Button>{' '}
+   <Card.Text>
+      {item.Description}
+   </Card.Text>
+     <Card.Text className="fw-bolder">Share this product</Card.Text>
+     <Card.Link> <FaFacebook/></Card.Link>{''}
+     <Card.Link><FaTwitter/></Card.Link>
+   </Card.Body>
+      </Col>
+          
+     </Row>  
+ </Container>
+  
+ </Card>
  
  )
 
 
 )
 
-const render = params.Itemid
+//const render = params.Itemid
 
   
 
