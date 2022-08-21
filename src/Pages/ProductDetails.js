@@ -21,11 +21,15 @@ function ProductDetails() {
    ( item.id ===Number(params.Itemid) &&
    <Card  key={item.id}>
    <Container fluid>
+
+    
       <Row>
            <Col lg={2}>
              </Col>
              <Col lg={3}>
-         <Card.Img variant="top" src={process.env.PUBLIC_URL +"./Assets/logo.png"} className ='Pimg' />
+         <Card.Img variant="top" src={`/${item.ProductImage}`} className ='Pimg' />
+
+         
          </Col>
          <Col lg ={6}>
          <Card.Body>
