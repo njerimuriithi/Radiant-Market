@@ -6,9 +6,10 @@ import { Link  } from 'react-router-dom';
 //import SolarLights from './SolarLights';
 import { useState } from 'react';
 import StarRating from './StarRating';
+import CartItem from './CartItem';
 function ProductCard() 
 {
-
+ // {listItems}
 
 const listItems = SolarProductList.map((item) =>
  
@@ -32,8 +33,8 @@ const listItems = SolarProductList.map((item) =>
 
   return (
     <div className='mainContents'>
-  {listItems}
- 
+
+      <CartItem/>
     </div>
   )
 }

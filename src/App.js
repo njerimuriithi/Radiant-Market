@@ -23,7 +23,7 @@ function App() {
   <MainNavigation/>
 
     <Routes>
-   <Route path ="/" element ={<AllCategories/>}/>
+  
     <Route path ="SolarLights" element ={<SolarLights/>}/>
     <Route path ="ContactUs" element ={<ContactUs/>}/>
     <Route path="Login" element={<Login/>}/>
