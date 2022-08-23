@@ -6,7 +6,8 @@ const SolarProductList =[
       ProductPrice:"KSh 2000",
       SubdizedPrice:"Ksh2500",
       StarRating:"Stars",
-      Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+      Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption ",
+      Thumbnail1:"./Assets/ProductImage/ThumbNails/2.jpg"
     },
 
     {

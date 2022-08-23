@@ -6,7 +6,7 @@ import './App.css';
 import TopNavigation from './Components/Navigation/TopNavigation';
 import {Container,Row,Col} from 'react-bootstrap'
 import MainNavigation from './Components/Navigation/MainNavigation';
-import AllCategories from './Pages/AllCategories';
+//import AllCategories from './Pages/AllCategories'; //for later version
 import SolarLights from './Pages/SolarLights';
 import ContactUs from './Pages/ContactUs';
 import Login from './Pages/Login';
@@ -23,8 +23,7 @@ function App() {
   <MainNavigation/>
 
     <Routes>
-   <Route path ="/" element ={<AllCategories/>}/>
-    <Route path ="SolarLights" element ={<SolarLights/>}/>
+   <Route path ="SolarLights" element ={<SolarLights/>}/>
     <Route path ="ContactUs" element ={<ContactUs/>}/>
     <Route path="Login" element={<Login/>}/>
     <Route path="/seemore/:Itemid" element={<ProductDetails/>}/>

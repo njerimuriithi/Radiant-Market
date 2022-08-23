@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Card ,Container,Row,Col,Button} from "react-bootstrap";
 import {FaFacebook,FaTwitter } from 'react-icons/fa';
 import './ProductDetails.css';
@@ -14,6 +14,9 @@ import SolarProductList from '../ProductsList/LightingData';
 
 function ProductDetails() {
   const params = useParams()
+  //const [thumbnailSlider,setthumnailSlider] = useState(SolarProductList[0]);
+
+  
   //console.log (params.Itemid)
   //console.log (typeof params.Itemid)
   
@@ -28,7 +31,18 @@ function ProductDetails() {
              </Col>
              <Col lg={3}>
          <Card.Img variant="top" src={`/${item.ProductImage}`} className ='Pimg' />
+         <div>
 
+          {
+            SolarProductList.map((image,i) =>
+
+              <Card.Img 
+         src={`/${image.Thumbnail1}`}
+         className='thumbanailImg'/>
+
+          )}
+       
+         </div>
          
          </Col>
          <Col lg ={6}>
