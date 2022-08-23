@@ -9,7 +9,9 @@ function MainNavigation() {
   return (
     <Navbar>
     <Container>
-    
+      <Navbar.Brand >
+         <Link to="/" className="mx-3">All Categories</Link>
+      </Navbar.Brand>
       <Nav className="me-auto">
           <Link to="SolarLights" className="mx-3">SolarLights</Link>
         

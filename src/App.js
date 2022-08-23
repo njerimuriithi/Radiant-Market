@@ -24,6 +24,8 @@ function App() {
 
     <Routes>
    <Route path ="SolarLights" element ={<SolarLights/>}/>
+    <Route path ="SolarLights" element ={<SolarLights/>}/>
+
     <Route path ="ContactUs" element ={<ContactUs/>}/>
     <Route path="Login" element={<Login/>}/>
     <Route path="/seemore/:Itemid" element={<ProductDetails/>}/>
