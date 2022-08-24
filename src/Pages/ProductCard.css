@@ -54,7 +54,7 @@ a{
 .table-borderless
 {
     position: relative;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 300px;
     height: 300px;
@@ -69,6 +69,11 @@ a{
 .d-flex-End
 {
     position: absolute;
-        top: 30px;
-        left: 00px;
+        top: 00px;
+        left: 10px;
+}
+.d-flex
+{
+    width: 600px;
+    height: 300px;
 }

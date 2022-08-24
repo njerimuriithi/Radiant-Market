@@ -27,7 +27,7 @@ function ContactUs() {
 
         </Table>
 
-        <Card className='d-flex-End'>
+        <Card className='d-flex align-items-center '>
           <Card.Title>Get in Touch</Card.Title>
           <Card.Text>Feel free to get in touch with us</Card.Text>
           <Form>
