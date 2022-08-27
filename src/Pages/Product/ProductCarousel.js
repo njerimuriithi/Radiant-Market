@@ -20,6 +20,7 @@ function ProductCarousel() {
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
+              autoplay:true,
               infinite: true,
               dots: true
             }
@@ -44,14 +45,14 @@ function ProductCarousel() {
   return (
     <Container >
              <Slider {...settings} className='Main' >
-     {SolarProductList.map((item) =>(
+     {SolarProductList.map((Product) =>(
 
-        <Card className='CardMain' key={item.id}>
+        <Card className='CardMain' key={Product.id}>
             
-            <Card.Img src={item.ProductImage} alt=''/>
-            <Card.Title>{item.ProductName}</Card.Title>
+            <Card.Img src={Product.ProductImage} alt=''/>
+            <Card.Title>{Product.ProductName}</Card.Title>
             <Card.Body>
-            <Card.Text>{item.ProductPrice}</Card.Text>
+            <Card.Text>{Product.ProductPrice}</Card.Text>
             </Card.Body>
           
          

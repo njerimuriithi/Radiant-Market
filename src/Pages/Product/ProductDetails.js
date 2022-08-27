@@ -10,6 +10,7 @@ import { Carousel } from 'react-responsive-carousel';
 //import SolarProductList from '../../ProductsList/LightingData';
 import SolarProductList from '../../ProductsList/LightingData';
 import ProductCarousel from './ProductCarousel';
+import Footer from '../Footer/Footer';
 
 
 
@@ -48,14 +49,14 @@ function ProductDetails() {
          </Col>
          <Col lg ={6}>
          <Card.Body>
-     <Card.Title>{item.ProductName}</Card.Title>
-     <Card.Title>{item.ProductPrice}      <span>Stars</span></Card.Title>
-         <Button className='btn'>Buy Now!</Button>{' '}
-     <Button  >Add Item to Cart</Button>{' '}
-     <Card.Text>
+     <Card.Title className='fs-3'>{item.ProductName}</Card.Title>
+     <Card.Title className='fs-4'>{item.ProductPrice}</Card.Title>{}
+         <Button className='btn fs-4'>Buy Now!</Button>{' '}
+     <Button className='fs-4'  >Add Item to Cart</Button>{' '}
+     <Card.Text className='fs-4 fw-normal'>
         {item.Description}
      </Card.Text>
-       <Card.Text className="fw-semibold">Share this product</Card.Text>
+       <Card.Text className="fw-3">Share this product</Card.Text>
        <Card.Link> <FaFacebook/></Card.Link>{''}
        <Card.Link><FaTwitter/></Card.Link>
      </Card.Body>
@@ -77,8 +78,9 @@ console.log(listItems)
     <div>
       
    <h1>{listItems}</h1>
+   <Footer/>
      
-  
+       
   
     </div>
     

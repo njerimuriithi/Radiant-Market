@@ -4,10 +4,10 @@ import './Footer.css'
 function Footer() {
   return (
     <Container fluid>
-     <Row className='main'>
+     <Row className='main fixed-bottom'>
         <Col>
         <Card className='Card'>
-            <Card.Title className='text-center'>Radiant Shop</Card.Title>
+            <Card.Title className='text-center fs-3 fw-semibold'>Radiant Shop</Card.Title>
             <Card.Text className='fs-5'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                 incididunt ut labore et dolore magna</Card.Text>
             <Card.Link className='fs-5'>Email @Radiantmarket.co.ke</Card.Link>
@@ -16,7 +16,7 @@ function Footer() {
         </Col>
         <Col>
         <Card className='Card'>
-            <Card.Title className='text-start'>Information</Card.Title>
+            <Card.Title className='text-start fs-3 '>Information</Card.Title>
             <Card.Body >
                 <Card.Title className='fs-4'>About Us</Card.Title>
                 <Card.Title className='mb-3 fs-4'>Contact Us</Card.Title>
