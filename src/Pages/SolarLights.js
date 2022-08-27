@@ -1,9 +1,8 @@
 import React from 'react'
-//import ProductCard from './ProductCard'
-import {Card,Button} from 'react-bootstrap';
-import ProductCard from './ProductCard';
-import './ProductCard.css';
+import './Product/ProductCard.css';
 import {useDispatch} from "react-redux";
+import Footer from './Footer/Footer';
+import ProductCard from './Product/ProductCard';
 
 
 function SolarLights() {
@@ -12,6 +11,7 @@ function SolarLights() {
   return (
 <div >
   <ProductCard/>
+  <Footer/>
 </div>
   )
 }

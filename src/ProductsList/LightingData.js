@@ -71,5 +71,85 @@ const SolarProductList =[
         Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
     
       },
+      {
+        id:8,
+        ProductImage:"./Assets/ProductImage/1.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
+      {
+        id:9,
+        ProductImage:"./Assets/ProductImage/2.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
+      {
+        id:10,
+        ProductImage:"./Assets/ProductImage/6.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
+      {
+        id:11,
+        ProductImage:"./Assets/ProductImage/5.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
+      {
+        id:12,
+        ProductImage:"./Assets/ProductImage/4.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
+      {
+        id:13,
+        ProductImage:"./Assets/ProductImage/3.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
+      {
+        id:14,
+        ProductImage:"./Assets/ProductImage/2.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
+      {
+        id:15,
+        ProductImage:"./Assets/ProductImage/1.jpg",
+        ProductName:"Solar Floodlight Lamp",
+        ProductPrice:"KSh 25000",
+        SubdizedPrice:"Ksh2500",
+        StarRating:"Stars",
+        Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
+    
+      },
   ]
   export default SolarProductList;

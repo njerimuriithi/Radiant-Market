@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link ,useParams  } from 'react-router-dom';
 //import {Card,Button} from 'react-bootstrap';
-import './ProductCard.css';
+import './Product/ProductCard.css';
 import {Card ,Container,Row,Col,Button} from "react-bootstrap";
 import {FaFacebook,FaTwitter } from 'react-icons/fa';
-import './ProductDetails.css';
+import './Product/ProductDetails.css';
 import SolarProductList from '../ProductsList/LightingData';
 
 function SeeMore() {

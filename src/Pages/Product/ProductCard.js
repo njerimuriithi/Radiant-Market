@@ -1,16 +1,16 @@
 import React from 'react'
-import SolarProductList from '../ProductsList/LightingData';
+import SolarProductList from '../../ProductsList/LightingData';
 import {Card,Button} from 'react-bootstrap';
 import './ProductCard.css';
 import { Link  } from 'react-router-dom';
 //import SolarLights from './SolarLights';
 import { useState } from 'react';
-import StarRating from './StarRating';
-import CartItem from './CartItem';
+import StarRating from '../StarRating';
+import CartItem from '../CartItem';
 function ProductCard() 
 {
- // {listItems}
-
+ 
+//<CartItem/>
 const listItems = SolarProductList.map((item) =>
  
    <Card className='MainCard'key={item.id}>
@@ -33,8 +33,8 @@ const listItems = SolarProductList.map((item) =>
 
   return (
     <div className='mainContents'>
-
-      <CartItem/>
+        {listItems}
+      
     </div>
   )
 }

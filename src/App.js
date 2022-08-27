@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import TopNavigation from './Components/Navigation/TopNavigation';
@@ -12,12 +15,13 @@ import ContactUs from './Pages/ContactUs';
 import Login from './Pages/Login';
 import ErrorPage from './Pages/ErrorPage';
 import SeeMore from './Pages/SeeMore';
-import ProductDetails from './Pages/ProductDetails';
+import ProductDetails from './Pages/Product/ProductDetails';
 
 function App() {
+  // <Route path="*" element={<ErrorPage/>}/>
+
   return (
     <div >
-
 
   <TopNavigation/>
   <MainNavigation/>
@@ -29,7 +33,6 @@ function App() {
     <Route path ="ContactUs" element ={<ContactUs/>}/>
     <Route path="Login" element={<Login/>}/>
     <Route path="/seemore/:Itemid" element={<ProductDetails/>}/>
-  <Route path="*" element={<ErrorPage/>}/>
 
   </Routes>
 
