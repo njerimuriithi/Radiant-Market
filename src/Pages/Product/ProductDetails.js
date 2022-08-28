@@ -5,8 +5,8 @@ import './ProductDetails.css';
 import { Link ,useParams  } from 'react-router-dom';
 //import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+//import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+//import { Carousel } from 'react-responsive-carousel';
 //import SolarProductList from '../../ProductsList/LightingData';
 import SolarProductList from '../../ProductsList/LightingData';
 import ProductCarousel from './ProductCarousel';

@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer() {
   return (
     <Container fluid>
-     <Row className='main fixed-bottom'>
+     <Row className='main sticky-bottom'>
         <Col>
         <Card className='Card'>
             <Card.Title className='text-center fs-3 fw-semibold'>Radiant Shop</Card.Title>
