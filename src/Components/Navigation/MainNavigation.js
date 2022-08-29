@@ -11,7 +11,7 @@ function MainNavigation() {
     <Container>
   
       <Nav className="me-auto">
-          <Link to="SolarLights" className="mx-3">SolarLights</Link>
+          <Link to="/" className="mx-3">SolarLights</Link>
         
          <Link to="ContactUs" className="mx-3">Contact Us</Link>
       

@@ -12,10 +12,13 @@ import MainNavigation from './Components/Navigation/MainNavigation';
 //import AllCategories from './Pages/AllCategories'; //for later version
 import SolarLights from './Pages/SolarLights';
 import ContactUs from './Pages/ContactUs';
-import Login from './Pages/Login';
+//import Login from './Pages/Login';
 import ErrorPage from './Pages/ErrorPage';
 import SeeMore from './Pages/SeeMore';
 import ProductDetails from './Pages/Product/ProductDetails';
+import Login from './Pages/OtherPages/Login';
+//import Login from './Pages/OtherPages/SignupPage';
+import SignupPage from './Pages/OtherPages/SignupPage';
 
 function App() {
   // <Route path="*" element={<ErrorPage/>}/>
@@ -27,11 +30,11 @@ function App() {
   <MainNavigation/>
 
     <Routes>
-   <Route path ="SolarLights" element ={<SolarLights/>}/>
+   <Route path ="/" element ={<SolarLights/>}/>
     <Route path ="SolarLights" element ={<SolarLights/>}/>
-
     <Route path ="ContactUs" element ={<ContactUs/>}/>
-    <Route path="Login" element={<Login/>}/>
+    <Route path ="/Login" element ={<Login/>}/>
+    <Route path="signup" element ={<SignupPage/>}/>
     <Route path="/seemore/:Itemid" element={<ProductDetails/>}/>
 
   </Routes>

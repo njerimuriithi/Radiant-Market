@@ -3,9 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,Container,Button,Form,Row,InputGroup,Col} from 'react-bootstrap'
 import { FaSearch } from 'react-icons/fa';
 import './TopNavigation.css';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate } from 'react-router-dom';
 
 function TopNavigation() {
+  const navigate = useNavigate();
  return ( 
    <Navbar >
     <Container fluid>
@@ -40,18 +41,18 @@ function TopNavigation() {
           />
           </Form.Group>
        </Form>
-       <Button bg='dark'variant='dark'><FaSearch/></Button>
+       <Button bg='dark'variant='dark' ><FaSearch/></Button>
        </InputGroup>
    </Col>
     
      
 
           <Col lg={2} className="d-grid gap-2 d-md-flex justify-content-md-end ">
-     <Button variant="outline-dark " className='myButton'>
+     <Button variant="outline-dark " className='myButton' onClick={()=>{navigate("/Login")}}>
       Login
        
       </Button>
-      <Button variant="outline-dark" className='myButton'>Signup</Button>
+      <Button variant="outline-dark" className='myButton' onClick={() => navigate("signup")}>Signup</Button>
       </Col>
    
    

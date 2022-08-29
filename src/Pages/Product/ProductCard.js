@@ -3,7 +3,6 @@ import SolarProductList from '../../ProductsList/LightingData';
 import {Card,Button} from 'react-bootstrap';
 import './ProductCard.css';
 import { Link  } from 'react-router-dom';
-//import SolarLights from './SolarLights';
 import { useState } from 'react';
 import StarRating from '../StarRating';
 import CartItem from '../CartItem';

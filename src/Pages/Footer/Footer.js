@@ -1,7 +1,10 @@
 import React from 'react'
+
 import{Container,Card,Row,Col} from'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import './Footer.css'
 function Footer() {
+  const navigate =useNavigate();
   return (
     <Container fluid>
      <Row className='main sticky-bottom'>
@@ -19,7 +22,7 @@ function Footer() {
             <Card.Title className='text-start fs-3 '>Information</Card.Title>
             <Card.Body >
                 <Card.Title className='fs-4'>About Us</Card.Title>
-                <Card.Title className='mb-3 fs-4'>Contact Us</Card.Title>
+                <Card.Title className='mb-3 fs-4' onClick={() => navigate("ContactUs")}>Contact Us</Card.Title>
                 <Card.Title className='fs-4'>My Orders</Card.Title>
                 <Card.Title className='fs-4'>Terms Conditions& </Card.Title>
             </Card.Body>

@@ -9,7 +9,7 @@ import ProductCarousel from './Product/ProductCarousel';
 function ContactUs() {
   return (
     <div>
-     {/* <Container className='mt-5 mb-5'>
+      <Container className='mt-5 mb-5'>
         <Table className='' borderless='true'>
        <thead className='align-middle  fs-4 fw-semibold' variant='dark'>
         <th>ContactUs</th>
@@ -62,8 +62,8 @@ function ContactUs() {
       </Container>
      <ProductCarousel/>
      <Footer/>
-  */}
-  <Login/>
+  
+
   </div>
 
     

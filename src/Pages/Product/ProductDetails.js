@@ -3,30 +3,16 @@ import {Card ,Container,Row,Col,Button} from "react-bootstrap";
 import {FaFacebook,FaTwitter } from 'react-icons/fa';
 import './ProductDetails.css';
 import { Link ,useParams  } from 'react-router-dom';
-//import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
-
-//import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-//import { Carousel } from 'react-responsive-carousel';
-//import SolarProductList from '../../ProductsList/LightingData';
 import SolarProductList from '../../ProductsList/LightingData';
 import ProductCarousel from './ProductCarousel';
 import Footer from '../Footer/Footer';
 
-
-
 function ProductDetails() {
   const params = useParams()
-  //const [thumbnailSlider,setthumnailSlider] = useState(SolarProductList[0]);
-
-  
-  //console.log (params.Itemid)
-  //console.log (typeof params.Itemid)
-  
   const listItems = SolarProductList.map((item) =>
    ( item.id ===Number(params.Itemid) &&
    <Card  key={item.id}>
    <Container fluid>
-
     
       <Row>
            <Col lg={2}>
@@ -68,8 +54,7 @@ function ProductDetails() {
    </Card>
    
    )
-  
-  
+    
   )
   
 console.log(listItems)
@@ -79,15 +64,8 @@ console.log(listItems)
       
    <h1>{listItems}</h1>
    <Footer/>
-     
-       
-  
+         
     </div>
-    
-        
-
-
-    
   )
 }
 
