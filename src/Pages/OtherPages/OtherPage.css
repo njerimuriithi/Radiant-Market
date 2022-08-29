@@ -8,9 +8,16 @@ margin-left: 25rem;
     margin-left: 15rem;
 }
 
-
-
 .FormElement
 {
         width: 800px
+}
+.signup
+{
+    margin-left: 15rem;
+    margin-bottom: 5.5rem;
+}
+.image
+{
+    width: 100px;
 }

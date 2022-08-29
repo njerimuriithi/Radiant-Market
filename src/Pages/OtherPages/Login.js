@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, Form ,Button,Container} from 'react-bootstrap'
-import './Login.css'
-
+import './OtherPage.css'
 function Login() {
   return (
     <Container fluid className=' MainContent '>
