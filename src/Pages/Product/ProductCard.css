@@ -11,12 +11,13 @@
 
 .MainCard
 {
-    width: 270px;
-    height: 420px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    margin-bottom: 15rem;
     display: inline-flex;
-    margin-bottom: 40px;
+    margin-left: 0em!important;
+    
     text-decoration: none !important;
 }
 a{

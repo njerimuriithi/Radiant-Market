@@ -7,7 +7,7 @@ function SignupPage() {
     <Container className='mt-5'>
         <div className='signup'>
        <img  classname ='image' src={process.env.PUBLIC_URL +"./Assets/logo.png"} alt='logo'/>
-       <h2>Signup</h2>
+       <h2>Signup Here</h2>
        </div>
      <Form>
       <Form.Group className="mb-3 fs-4 fw-semibold" controlId="formBasicEmail">

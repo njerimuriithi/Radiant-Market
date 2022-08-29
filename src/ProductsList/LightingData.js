@@ -20,7 +20,7 @@ const SolarProductList =[
         Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
     
       },
-      {
+       {
         id:3,
         ProductImage:"./Assets/ProductImage/p2.jpg",
         ProductName:"Solar Light 100w Led Top Quality Solar Floodlight Lamp",
@@ -149,7 +149,8 @@ const SolarProductList =[
         SubdizedPrice:"Ksh2500",
         StarRating:"Stars",
         Description:"The  NEW CL -03  is a reliable solar lighting kit that has 3 low consumption "
-    
       },
+     
+    
   ]
   export default SolarProductList;

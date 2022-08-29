@@ -11,7 +11,7 @@ function SolarLights() {
   return (
 <div >
   <ProductCard/>
-  <Footer/>
+
 </div>
   )
 }
