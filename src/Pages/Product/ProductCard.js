@@ -1,24 +1,44 @@
 import React from 'react'
 import SolarProductList from '../../ProductsList/LightingData';
-import {Card,Button, Container} from 'react-bootstrap';
+import {Card,Button, Container,Row,Col} from 'react-bootstrap';
 import './ProductCard.css';
 import { Link  } from 'react-router-dom';
 import { useState } from 'react';
 import StarRating from '../StarRating';
 import CartItem from '../CartItem';
+
 function ProductCard() 
 {
 
   return (
-    <Container className=''>
+    <Container fluid className='maincontainer p-0'>
+      <Row sm={2} xs={2} md={5} className="g-2">
         
-
-        {
+{
           SolarProductList.map((item)=>(
+              <Col
+                 style ={{
+     }}
+              >
+      <Card className='MainCard '
+      style ={{
 
-      <Card className='MainCard 'key={item.id}>
+        marginLeft:'5px',
+          width:'250px',
+             marginBottom:'14rem',
+          
+      }}
+      
+      key={item.id}>
     <Link to={`/seemore/${item.id}`}>
-      <Card.Img variant="top" src={item.ProductImage} />
+     
+      <Card.Img variant="top"  src={item.ProductImage}
+      className='img-fluid'
+      style={{ width: '200px' }}
+      
+      />
+      
+      
       <Card.Body>
       <Card.Text className='MainText'>
        {item.ProductName}
@@ -28,14 +48,16 @@ function ProductCard()
       
    
       </Card.Body>
+      
       </Link>
       <span className='StarRating'><StarRating/></span>
       
     </Card>
-
+       </Col>
           ))
-        }
-      
+   }
+   
+      </Row>
     </Container>
   )
 }

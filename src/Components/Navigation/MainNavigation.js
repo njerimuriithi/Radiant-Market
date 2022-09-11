@@ -13,8 +13,7 @@ function MainNavigation() {
       <Nav className="me-auto">
           <Link to="/" className="mx-3">SolarLights</Link>
         
-         <Link to="ContactUs" className="mx-3">Contact Us</Link>
-      
+        
       </Nav>
       <FaShoppingCart className="Icon"/>
       <FaHeart className="Icon"/>

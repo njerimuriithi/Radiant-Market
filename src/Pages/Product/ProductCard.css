@@ -1,25 +1,25 @@
-.mainContents
+/*.mainContents
 {
     margin-left: 170px;
     margin-top: 20px;
-   
-
-    
-
+  }
+.maincontainer
+{
+  margin-left: 200px;
 }
-
 
 .MainCard
 {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-right: 30px;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
     display: inline-flex;
     margin-left: 0em!important;
     
     text-decoration: none !important;
 }
+*/
 a{
     text-decoration: none;
     color: black;
@@ -29,6 +29,9 @@ a{
 {
     margin-bottom: 0px;
     text-decoration: none !important;
+    font-size: 18px;
+    font-family: sans-serif;
+    width:170px
 }
 .PriceText
 {
@@ -92,6 +95,7 @@ a{
     padding-left: 200px;
     padding-right: 30px;
 }
+/*
 .TinyPurple {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -128,4 +132,32 @@ a{
     -moz-border-radius: 20px;
     border-radius: 20px;
     text-decoration: none;
- }
+ 
+}
+@media screen and (max-width:540px) 
+{
+    .MainCard {
+        width: 300px;
+        height: 300px;
+        text-decoration: none;
+        margin-bottom: 18rem;
+        display:flex;
+
+        }
+        a
+        {
+            display: flex;
+            align-items: center;
+        }
+        .maincontainer{
+            width: 1200px !important;
+            height: auto;
+        }
+
+                .card-body{
+                    width: 200px !important;
+                    height: 200px;
+                }
+}
+
+*/

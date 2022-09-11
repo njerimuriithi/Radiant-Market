@@ -51,7 +51,7 @@ const SolarProductList =[
     
       },
 
-      {
+     {
         id:6,
         ProductImage:"./Assets/ProductImage/p3.jpg",
         ProductName:"Solar Light 100w Led  Solar Floodlight Lamp",
