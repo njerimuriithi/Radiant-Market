@@ -60,8 +60,7 @@ function ContactUs() {
 
       
       </Container>
-     <ProductCarousel/>
-     <Footer/>
+         <Footer/>
   
 
   </div>

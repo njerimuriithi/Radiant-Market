@@ -7,7 +7,7 @@ function Footer() {
   const navigate =useNavigate();
   return (
     <Container fluid>
-     <Row className='main sticky-bottom'>
+     <Row className='main '>
         <Col>
         <Card className='Card'>
             <Card.Title className='text-center fs-3 fw-semibold'>Radiant Shop</Card.Title>

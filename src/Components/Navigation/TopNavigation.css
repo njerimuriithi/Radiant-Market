@@ -29,18 +29,17 @@ width: 500px;
 }
 .txt1
 {
-    margin-left: -150px;
+        margin-right: 40px
 }
 
 .myButton {
 	box-shadow: -1px 0px 0px 0px #ebf2f5;
-	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
-	background-color:#33bdef;
+	
 	border-radius:15px;
 	border:1px solid #057fd0;
 	display:inline-block;
 	cursor:pointer;
-	color:#f7f7f7;
+	color:black;
 	font-family:Verdana;
 	font-size:15px;
 	font-weight:bold;
@@ -49,8 +48,7 @@ width: 500px;
 	text-shadow:0px 1px 0px #5b6178;
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-	background-color:#019ad2;
+	
 }
 .myButton:active {
 	position:relative;
@@ -81,5 +79,18 @@ width: 500px;
     height: 50px;
 
     }
+    
+    
+}
+@media screen and (max-width:540px) {
+
+.BrandLogo{
+    display: none;
+}
+.txt1 {
+    margin-left: -200px;
+    width: 100px;
+}
+
     
 }
