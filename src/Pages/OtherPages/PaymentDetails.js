@@ -1,5 +1,5 @@
 import React from 'react'
-import './PaymentDetails.css'
+//import './PaymentDetails.css'
 
 function PaymentDetails() {
   return (

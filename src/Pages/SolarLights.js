@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import Footer from './Footer/Footer';
 import ProductCard from './Product/ProductCard';
 import CartItem from './CartItem';
-import PaymentDetails from './OtherPages/PaymentDetails';
+//import PaymentDetails from './OtherPages/PaymentDetails';
 
 
 function SolarLights() {
