@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {Card ,Container,Row,Col,Button} from "react-bootstrap";
 import {FaFacebook,FaTwitter } from 'react-icons/fa';
 import './ProductDetails.css';
@@ -6,9 +7,14 @@ import { Link ,useParams  } from 'react-router-dom';
 import SolarProductList from '../../ProductsList/LightingData';
 import ProductCarousel from './ProductCarousel';
 import Footer from '../Footer/Footer';
+import{increment}  from'../../store/addtocartSlice'
+
 
 function ProductDetails() {
   const params = useParams()
+  const dispatch = useDispatch()
+  //const value = useSelector((state) => state.cart.value)
+ 
   const listItems = SolarProductList.map((item) =>
    ( item.id ===Number(params.Itemid) &&
    <Card  key={item.id}>
@@ -37,7 +43,11 @@ function ProductDetails() {
          <Card.Body>
      <Card.Title className='fs-3'>{item.ProductName}</Card.Title>
      <Card.Title className='fs-4'>{item.ProductPrice}</Card.Title>{}
-         <Button className='btn fs-4'>Buy Now!</Button>{' '}
+         <Button
+          className='btn fs-4'
+          onClick={()=>dispatch(increment())}
+          >
+          Buy Now!</Button>{' '}
      <Button className='fs-4'  >Add Item to Cart</Button>{' '}
      <Card.Text className='fs-4 fw-normal'>
         {item.Description}
@@ -50,7 +60,7 @@ function ProductDetails() {
             
        </Row>  
    </Container>
-    
+  
    </Card>
    
    )
@@ -61,9 +71,9 @@ console.log(listItems)
 
   return (
     <div>
-      
+        
    <h1>{listItems}</h1>
-   <Footer/>
+   
          
     </div>
   )

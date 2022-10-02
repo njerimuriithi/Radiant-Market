@@ -1,4 +1,6 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux';
+import{increment}  from'../../store/addtocartSlice'
 import SolarProductList from '../../ProductsList/LightingData';
 import {Card,Button, Container,Row,Col} from 'react-bootstrap';
 import './ProductCard.css';
@@ -9,7 +11,7 @@ import CartItem from '../CartItem';
 
 function ProductCard() 
 {
-
+const dispatch = useDispatch()
   return (
     <Container fluid className='maincontainer p-0'>
       <Row sm={2} xs={2} md={5} className="g-2">
@@ -37,6 +39,7 @@ function ProductCard()
       style={{ width: '200px' }}
       
       />
+
       
       
       <Card.Body>
@@ -51,6 +54,7 @@ function ProductCard()
       
       </Link>
       <span className='StarRating'><StarRating/></span>
+
       
     </Card>
        </Col>

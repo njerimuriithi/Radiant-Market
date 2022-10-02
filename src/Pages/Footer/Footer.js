@@ -1,8 +1,9 @@
 import React from 'react'
+import './Footer.css';
 
 import{Container,Card,Row,Col} from'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-import './Footer.css'
+
 function Footer() {
   const navigate =useNavigate();
   return (
