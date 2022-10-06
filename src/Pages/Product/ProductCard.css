@@ -1,3 +1,13 @@
+body {
+    padding: 2rem 0rem;
+  }
+  
+  .like {
+    font-size: 1.5rem;
+  }
+
+
+
 /*.mainContents
 {
     margin-left: 170px;
@@ -19,7 +29,7 @@
     
     text-decoration: none !important;
 }
-*/
+
 a{
     text-decoration: none;
     color: black;

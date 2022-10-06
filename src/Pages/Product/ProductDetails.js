@@ -7,7 +7,7 @@ import { Link ,useParams  } from 'react-router-dom';
 import SolarProductList from '../../ProductsList/LightingData';
 import ProductCarousel from './ProductCarousel';
 import Footer from '../Footer/Footer';
-import{increment}  from'../../store/addtocartSlice'
+
 
 
 function ProductDetails() {
@@ -45,7 +45,7 @@ function ProductDetails() {
      <Card.Title className='fs-4'>{item.ProductPrice}</Card.Title>{}
          <Button
           className='btn fs-4'
-          onClick={()=>dispatch(increment())}
+          
           >
           Buy Now!</Button>{' '}
      <Button className='fs-4'  >Add Item to Cart</Button>{' '}

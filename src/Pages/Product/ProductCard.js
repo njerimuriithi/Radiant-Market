@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import{increment}  from'../../store/addtocartSlice'
+import{AddCart}  from'../../store/addtocartSlice'
 import SolarProductList from '../../ProductsList/LightingData';
 import {Card,Button, Container,Row,Col} from 'react-bootstrap';
 import './ProductCard.css';
@@ -8,62 +8,96 @@ import { Link  } from 'react-router-dom';
 import { useState } from 'react';
 import StarRating from '../StarRating';
 import CartItem from '../CartItem';
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBIcon,
+  MDBBtn,
+  MDBRipple
+} from "mdb-react-ui-kit";
+
 
 function ProductCard() 
 {
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
+  //click function that handles the dispatch
+  const handleAddToCart =(item)=>{
+    dispatch(AddCart(item));
+  }
+
+  {/* Show Products */ }
   return (
-    <Container fluid className='maincontainer p-0'>
-      <Row sm={2} xs={2} md={5} className="g-2">
-        
-{
-          SolarProductList.map((item)=>(
-              <Col
-                 style ={{
-     }}
+   
+  <MDBContainer fluid className="my-5 text-center">
+  
+  <MDBRow>
+     {
+      SolarProductList.map((item)=>(
+        <MDBCol md="4" lg="2" sm="6" className="mb-4" key={item.id}>
+        <MDBCard>
+          <MDBRipple
+            rippleColor="light"
+            rippleTag="div"
+            className="bg-image rounded hover-zoom"
+          >
+            <MDBCardImage
+              src={item.ProductImage}
+              fluid
+              className="w-100"
+            />
+            <a href="#!">
+              <div className="mask">
+                <div className="d-flex justify-content-start align-items-end h-100">
+                  <h5>
+                
+                  </h5>
+                </div>
+              </div>
+              <div className="hover-overlay">
+                <div
+                  className="mask"
+                  style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                ></div>
+              </div>
+            </a>
+          </MDBRipple>
+          <MDBCardBody>
+            <a href="#!" className="text-reset">
+              <h5 className="card-title mb-3">
+                {item.ProductName}
+              </h5>
+            </a>
+            <a href="#!" className="text-reset">
+             onClick={()=> handleAddToCart(item)}
+            </a>
+            <h6 className="mb-3">{item.ProductPrice}</h6>
+            <div className="d-flex flex-row">
+              <MDBBtn
+                color="primary"
+                rippleColor="dark"
+                className="flex-fill ms-1"
+                
               >
-      <Card className='MainCard '
-      style ={{
-
-        marginLeft:'5px',
-          width:'250px',
-             marginBottom:'14rem',
-          
-      }}
-      
-      key={item.id}>
-    <Link to={`/seemore/${item.id}`}>
-     
-      <Card.Img variant="top"  src={item.ProductImage}
-      className='img-fluid'
-      style={{ width: '200px' }}
-      
-      />
-
-      
-      
-      <Card.Body>
-      <Card.Text className='MainText'>
-       {item.ProductName}
-      </Card.Text>
-      <Card.Title className ='PriceText'>{item.ProductPrice}</Card.Title>
-      <Card.Text className='PriceReduction'><s>{item.SubdizedPrice}</s></Card.Text>
-      
+                Add To Cart
+              </MDBBtn>
+              <MDBBtn color="danger" className="flex-fill ms-2">
+                Buy now
+              </MDBBtn>
+            </div>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+      ))
+     }
    
-      </Card.Body>
-      
-      </Link>
-      <span className='StarRating'><StarRating/></span>
-
-      
-    </Card>
-       </Col>
-          ))
-   }
-   
-      </Row>
-    </Container>
-  )
-}
+    </MDBRow>
+    </MDBContainer>
+  
+)}
 
 export default ProductCard
+
