@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import{AddCart}  from'../../store/addtocartSlice'
 import SolarProductList from '../../ProductsList/LightingData';
 import {Card,Button, Container,Row,Col} from 'react-bootstrap';
-//import './ProductCard.css';
+import './ProductCard.css';
 import { Link  } from 'react-router-dom';
 import { useState } from 'react';
 import StarRating from '../StarRating';
