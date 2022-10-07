@@ -1,7 +1,18 @@
 
-const app = require('express')();
-const port = 5555;
+const express = require('express')();
+const cors = require("cors");
+const products = require("./products")
 
+
+const app = express();
+app.use(express.json()); //express.json is the middleware
+
+app.use(cors());
+
+app.get("/products" , (req,res) =>{
+  res.send(products);  
+});
+const port = process.env.POrt || 5555
 //run node. to 
 //request - from the user
 // response - from the backend after a request is made

@@ -1,45 +1,95 @@
 import React from 'react'
 import {Form,Button,Container} from 'react-bootstrap'
-import './OtherPage.css'
+//import './OtherPage.css'
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput,
+  MDBCheckbox
+}
+from 'mdb-react-ui-kit';
+
 
 function SignupPage() {
   return (
-    <Container className='mt-5'>
-        <div className='signup'>
-       <img  classname ='image' src={process.env.PUBLIC_URL +"./Assets/logo.png"} alt='logo'/>
-       <h2>Signup Here</h2>
-       </div>
-     <Form>
-      <Form.Group className="mb-3 fs-4 fw-semibold" controlId="formBasicEmail">
-        <Form.Label >First Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter First Name" />
-          </Form.Group>
+    <MDBContainer fluid className='p-4'>
 
-          <Form.Group className="mb-3 fs-4 fw-semibold" controlId="formBasicEmail">
-        <Form.Label >Last Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter last name" />
-          </Form.Group>
+    <MDBRow>
 
-          <Form.Group className="mb-3 fs-4 fw-semibold" controlId="formBasicEmail">
-        <Form.Label >Email</Form.Label>
-        <Form.Control type="email" placeholder="Enter Email" />
-          </Form.Group>
+      <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
 
+        <h1 className="my-5 display-3 fw-bold ls-tight px-3">
+          The best Products <br />
+          <span className="text-primary">Ever</span>
+        </h1>
 
-      <Form.Group className="mb-3 fs-4 fw-semibold" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
-      <Form.Group className="mb-3 fs-4 fw-normal" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="I Agree with privacy and policy" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Sign up
-      </Button>
-    </Form>
+        <p className='px-3' style={{color: 'hsl(217, 10%, 50.8%)'}}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          veritatis? Dicta facilis sint aliquid ipsum atque?
+        </p>
 
+      </MDBCol>
 
-    </Container>
+      <MDBCol md='6'>
+
+        <MDBCard className='my-5'>
+          <MDBCardBody className='p-5'>
+
+            <MDBRow>
+              <MDBCol col='6'>
+                <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
+              </MDBCol>
+
+              <MDBCol col='6'>
+                <MDBInput wrapperClass='mb-4' label='Last name' id='form1' type='text'/>
+              </MDBCol>
+            </MDBRow>
+
+            <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
+            <MDBInput wrapperClass='mb-4' label='Password' id='form1' type='password'/>
+
+            <div className='d-flex justify-content-center mb-4'>
+              <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+            </div>
+
+            <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+
+            <div className="text-center">
+
+              <p>or sign up with:</p>
+
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='facebook-f' size="sm"/>
+              </MDBBtn>
+
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='twitter' size="sm"/>
+              </MDBBtn>
+
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='google' size="sm"/>
+              </MDBBtn>
+
+              <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
+                <MDBIcon fab icon='github' size="sm"/>
+              </MDBBtn>
+
+            </div>
+
+          </MDBCardBody>
+        </MDBCard>
+
+      </MDBCol>
+
+    </MDBRow>
+
+  </MDBContainer>
   )
 }
 

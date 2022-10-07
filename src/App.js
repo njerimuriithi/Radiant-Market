@@ -19,6 +19,7 @@ import ProductDetails from './Pages/Product/ProductDetails';
 import Login from './Pages/OtherPages/Login';
 //import Login from './Pages/OtherPages/SignupPage';
 import SignupPage from './Pages/OtherPages/SignupPage';
+import CartItem from './Pages/CartItem';
 
 function App() {
   // <Route path="*" element={<ErrorPage/>}/>
@@ -35,6 +36,7 @@ function App() {
     <Route path ="ContactUs" element ={<ContactUs/>}/>
     <Route path ="/Login" element ={<Login/>}/>
     <Route path="signup" element ={<SignupPage/>}/>
+    <Route path ="AddtoCart" element ={<CartItem/>}/>
     <Route path="/seemore/:Itemid" element={<ProductDetails/>}/>
 
   </Routes>

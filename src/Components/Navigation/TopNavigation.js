@@ -17,9 +17,9 @@ function TopNavigation() {
     <h3 className='Name text-end'>Market</h3>   
    </div>
 
-              <InputGroup size='sm' className="mb-3">
+              <InputGroup size='sm' className="mb-3 mt-3">
             <Form.Control 
-         
+            className='mt-2'
           type="search" 
           placeholder="Search for products" 
           
