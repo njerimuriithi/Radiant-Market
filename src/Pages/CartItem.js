@@ -22,8 +22,8 @@ import {
 
 function CartItem() {
   return (
-    <section className="h-100 gradient-custom">
-    <MDBContainer className="py-5 h-100">
+    <section className="h-100 gradient-custom" style={{ backgroundColor: "#f8f9fa" }}>
+    <MDBContainer className="py-5 h-100" style={{ backgroundColor: "#f8f9fa" }}>
       <MDBRow className="justify-content-center my-4">
         <MDBCol md="8">
           <MDBCard className="mb-4">

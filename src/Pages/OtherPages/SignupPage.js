@@ -36,7 +36,7 @@ function SignupPage() {
 
       </MDBCol>
 
-      <MDBCol md='6'>
+      <MDBCol md='6' style={{ backgroundColor: "#f8f9fa" }}>
 
         <MDBCard className='my-5'>
           <MDBCardBody className='p-5'>

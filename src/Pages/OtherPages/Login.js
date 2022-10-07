@@ -16,7 +16,7 @@ from 'mdb-react-ui-kit';
 import './OtherPage.css'
 function Login() {
   return (
-    <MDBContainer className="my-5">
+    <MDBContainer className="my-5" style={{ backgroundColor: "#f8f9fa" }}>
 
     <MDBCard>
     <MDBRow className='d-flex justify-content-center align-items-center h-100'>

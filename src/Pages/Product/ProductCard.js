@@ -32,7 +32,7 @@ function ProductCard()
   {/* Show Products */ }
   return (
    
-  <MDBContainer fluid className="my-5 text-center">
+  <MDBContainer fluid className="my-5 text-center" style={{ backgroundColor: "#f8f9fa" }}>
   
   <MDBRow>
      {
@@ -65,7 +65,7 @@ function ProductCard()
               </div>
             </a>
           </MDBRipple>
-          <MDBCardBody>
+          <MDBCardBody >
             <a href="#!" className="text-reset">
               <h5 className="card-title mb-3">
                 {item.ProductName}
