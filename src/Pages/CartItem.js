@@ -1,4 +1,5 @@
 import React from 'react'
+import {useSelector} from 'react-redux'
 import {Stack,Button} from 'react-bootstrap'
 import { BsPlusSquareFill} from "react-icons/bs";
 import { FaMinusSquare } from "react-icons/fa";
@@ -21,6 +22,16 @@ import {
   } from "mdb-react-ui-kit";
 
 function CartItem() {
+    const totalQuantity = useSelector((state)=> state.cart.totalQuantity);
+    if (totalQuantity < 1){
+    return(
+      <div>
+      <h1>Cart is Empty</h1>
+      </div>
+      
+    )
+  }
+  
   return (
     <section className="h-100 gradient-custom" style={{ backgroundColor: "#f8f9fa" }}>
     <MDBContainer className="py-5 h-100" style={{ backgroundColor: "#f8f9fa" }}>

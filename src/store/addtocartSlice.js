@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+//import SolarProductList from "../ProductsList/LightingData";
 import SolarProductList from "../ProductsList/LightingData";
 
 const initialState ={
-    SolarProductList:[],  
+    SolarProductList:SolarProductList,  
 totalQuantity: 0,
 }
 
