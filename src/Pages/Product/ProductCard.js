@@ -1,11 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import{AddCart}  from'../../store/addtocartSlice'
+import{AddCart, ShowItemQuantity}  from'../../store/addtocartSlice'
 import SolarProductList from '../../ProductsList/LightingData';
 import {Card,Button, Container,Row,Col} from 'react-bootstrap';
 //import './ProductCard.css';
 import { Link  } from 'react-router-dom';
-import { useState } from 'react';
 import StarRating from '../StarRating';
 import CartItem from '../CartItem';
 import {
@@ -25,9 +24,9 @@ function ProductCard()
 {
   const dispatch = useDispatch()
   //click function that handles the dispatch
-  const handleAddToCart =(item)=>{
-    dispatch(AddCart(item));
-  }
+
+
+  //state when you click add to
 
   {/* Show Products */ }
   return (
@@ -37,7 +36,7 @@ function ProductCard()
   <MDBRow>
      {
       SolarProductList.map((item)=>(
-        <MDBCol md="4" lg="2" sm="6" className="mb-4" key={item.id}>
+        <MDBCol md="3" lg="2" sm="6" className="mb-4" key={item.id}>
         <MDBCard>
           <MDBRipple
             rippleColor="light"
@@ -72,7 +71,7 @@ function ProductCard()
               </h5>
             </a>
             <a href="#!" className="text-reset">
-             onClick={()=> handleAddToCart(item)}
+             
             </a>
             <h6 className="mb-3">{item.ProductPrice}</h6>
             <div className="d-flex flex-row">
@@ -80,8 +79,7 @@ function ProductCard()
                 color="primary"
                 rippleColor="dark"
                 className="flex-fill ms-1"
-                
-              >
+               >
                 Add To Cart
               </MDBBtn>
               <MDBBtn color="danger" className="flex-fill ms-2">
