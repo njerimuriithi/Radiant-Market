@@ -23,6 +23,11 @@ import {
 function ProductCard() 
 {
   const dispatch = useDispatch()
+  
+  const totalQuantity = useSelector((state)=> state.cart.totalQuantity);
+
+  
+
   //click function that handles the dispatch
 
 
@@ -32,7 +37,7 @@ function ProductCard()
   return (
    
   <MDBContainer fluid className="my-5 text-center" style={{ backgroundColor: "#f8f9fa" }}>
-  
+   
   <MDBRow>
      {
       SolarProductList.map((item)=>(
@@ -79,6 +84,11 @@ function ProductCard()
                 color="primary"
                 rippleColor="dark"
                 className="flex-fill ms-1"
+                onClick={()=>{
+                   dispatch(AddCart());
+                   dispatch(ShowItemQuantity())
+                  
+                }}
                >
                 Add To Cart
               </MDBBtn>

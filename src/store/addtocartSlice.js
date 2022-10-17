@@ -4,6 +4,7 @@ import SolarProductList from "../ProductsList/LightingData";
 
 const initialState ={
     SolarProductList:SolarProductList,  
+ 
 totalQuantity: 0,
 }
 
@@ -11,20 +12,24 @@ export const cartSlice =createSlice({
     name:"cart",
     initialState,
 
-    reducer:{
+    reducers:{
         AddCart:(state,action)=>{
-          const productIndex =  state.SolarProductList.findIndex((product) => product.id === action.payload);
-          if(productIndex>=0)
+          const ProductList = state.SolarProductList.find((product) => product.id == action.payload.id)
+          if(ProductList)
           {
-            state.SolarProductList[productIndex].totalQuantity += 1
-          }else
-          {
-            const AddProduct = {...action.payload , totalQuantity:1};
-            state.SolarProductList.push(AddProduct)
+            ProductList.totalQuantity++
+          }else{
+            state.cart.push({...action.payload, totalQuantity :1})
           }
+          
         },
+       //ShowItemQuantity
+       ShowItemQuantity:(state)=>
+       {
+        state.totalQuantity +=1
+       }
     }
 })
 
-export const {AddCart} = cartSlice.actions;
+export const {AddCart,ShowItemQuantity} = cartSlice.actions;
 export default cartSlice.reducer;
