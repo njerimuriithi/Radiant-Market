@@ -85,7 +85,7 @@ function ProductCard()
                 rippleColor="dark"
                 className="flex-fill ms-1"
                 onClick={()=>{
-                   dispatch(AddCart());
+                   dispatch(AddCart(item));
                    dispatch(ShowItemQuantity())
                   
                 }}

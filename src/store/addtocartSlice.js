@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import SolarProductList from "../ProductsList/LightingData";
 
 const initialState ={
-    SolarProductList:SolarProductList,  
+    ProductList:SolarProductList,  
  
 totalQuantity: 0,
 }
@@ -14,10 +14,12 @@ export const cartSlice =createSlice({
 
     reducers:{
         AddCart:(state,action)=>{
-          const ProductList = state.SolarProductList.find((product) => product.id == action.payload.id)
-          if(ProductList)
+
+          //state.ProductList.push(action.payload)
+          const ProductItems= state.ProductList.find((product) => product.id == action.payload.id)
+          if(ProductItems)
           {
-            ProductList.totalQuantity++
+            ProductItems.totalQuantity++
           }else{
             state.cart.push({...action.payload, totalQuantity :1})
           }

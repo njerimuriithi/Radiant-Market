@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux'
 import {Stack,Button} from 'react-bootstrap'
 import { BsPlusSquareFill} from "react-icons/bs";
 import { FaMinusSquare } from "react-icons/fa";
-import SolarProductList from '../ProductsList/LightingData';
+//import SolarProductList from '../ProductsList/LightingData';
 import {
   MDBBtn,
   MDBCard,
@@ -24,7 +24,14 @@ import {
 import CartProduct from '../CartProduct';
 
 function CartItem() {
-    const {totalQuantity,SolarProductList} = useSelector((state)=> state.cart);
+    //const {totalQuantity} = useSelector((state)=> state.cart);
+    const totalQuantity = useSelector((state)=> state.cart.totalQuantity);
+    const ProductList = useSelector((state)=> state.cart.ProductList);
+
+
+
+   // console.log(ProductList)
+    
     if (totalQuantity < 1){
     return(
       <div>
@@ -41,9 +48,90 @@ function CartItem() {
     <MDBContainer className="py-5 h-100" style={{ backgroundColor: "#f8f9fa" }}>
       <MDBRow className="justify-content-center my-4">
         <MDBCol md="8">
+          
+
           <MDBCard className="mb-4">
+            <MDBCardHeader className="py-3">
+              <MDBTypography tag="h5" className="mb-0">
+                Cart - 2 items
+              </MDBTypography>
+            </MDBCardHeader>
+      
+             
+ 
+            {
+                ProductList.map((item) =>(
+                  <MDBCardBody key={item.id} >
+                  <MDBRow>
+                    <MDBCol lg="3" md="12" className="mb-4 mb-lg-0">
+                      <MDBRipple rippleTag="div" rippleColor="light"
+                        className="bg-image rounded hover-zoom hover-overlay">
+                        <img
+                          src={item.ProductImage}
+                          className="w-100" />
+                        <a href="#!">
+                          <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" , }}>
+                          </div>
+                        </a>
+                      </MDBRipple>
+                    </MDBCol>
+      
+                    <MDBCol lg="5" md="6" className=" mb-4 mb-lg-0">
+                      <p>
+                        <strong>{item.ProductName}</strong>
+                      </p>
+                      
+      
+                      <MDBTooltip wrapperProps={{ size: "sm" }} wrapperClass="me-1 mb-2"
+                        title="Remove item">
+                        <MDBIcon fas icon="trash" />
+                      </MDBTooltip>
+      
+                      <MDBTooltip wrapperProps={{ size: "sm" , color: "danger" }} wrapperClass="me-1 mb-2"
+                        title="Move to the wish list">
+                        <MDBIcon fas icon="heart" />
+                      </MDBTooltip>
+                    </MDBCol>
+                    <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
+                      <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
+                        <MDBBtn className="px-3 me-2">
+                          <MDBIcon fas icon="minus" />
+                        </MDBBtn>
+      
+                        <MDBInput defaultValue={1} min={0} type="number" label="Quantity" />
+      
+                        <MDBBtn className="px-3 ms-2">
+                          <MDBIcon fas icon="plus" />
+                        </MDBBtn>
+                      </div>
+      
+                      <p className="text-start text-md-center">
+                        <strong>{item.ProductPrice}</strong>
+                      </p>
+                    </MDBCol>
+                  </MDBRow>
+                 
+      
+                </MDBCardBody>
+
+
+
+
+                ))
+
+
+            }
+
+
+
+         
+         
+
+
+
             
-            <MDBCardBody>
+           
+             {/*
              
                {
                 SolarProductList.map((product) =>{
@@ -58,6 +146,9 @@ function CartItem() {
                   
                 })
                }
+             
+             */}
+             
                   
                 
              
@@ -65,7 +156,7 @@ function CartItem() {
               <hr className="my-4" />
   
              
-            </MDBCardBody>
+            
           </MDBCard>
   
           <MDBCard className="mb-4">
