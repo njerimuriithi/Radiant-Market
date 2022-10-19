@@ -1,8 +1,10 @@
 import React from 'react'
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {Stack,Button} from 'react-bootstrap'
 import { BsPlusSquareFill} from "react-icons/bs";
 import { FaMinusSquare } from "react-icons/fa";
+//import{RemoveFromCart} from '../store/addtocartSlice'
+import{AddCart, ShowItemQuantity,RemoveFromCart,IncreaseQuantityItem,DecreaseQuantitityItem}  from'../store/addtocartSlice'
 //import SolarProductList from '../ProductsList/LightingData';
 import {
   MDBBtn,
@@ -25,13 +27,10 @@ import CartProduct from '../CartProduct';
 
 function CartItem() {
     //const {totalQuantity} = useSelector((state)=> state.cart);
+    const dispatch = useDispatch();
     const totalQuantity = useSelector((state)=> state.cart.totalQuantity);
-    const ProductList = useSelector((state)=> state.cart.ProductList);
+    const ProductList = useSelector((item)=> item.cart.ProductList);
 
-
-
-   // console.log(ProductList)
-    
     if (totalQuantity < 1){
     return(
       <div>
@@ -53,7 +52,7 @@ function CartItem() {
           <MDBCard className="mb-4">
             <MDBCardHeader className="py-3">
               <MDBTypography tag="h5" className="mb-0">
-                Cart - 2 items
+              {totalQuantity} Cart  items
               </MDBTypography>
             </MDBCardHeader>
       
@@ -83,8 +82,12 @@ function CartItem() {
                       
       
                       <MDBTooltip wrapperProps={{ size: "sm" }} wrapperClass="me-1 mb-2"
+                       
                         title="Remove item">
-                        <MDBIcon fas icon="trash" />
+                        <MDBIcon  onClick={()=>{
+                          dispatch(RemoveFromCart(item.id));                                              
+                       }}
+                     fas icon="trash" />
                       </MDBTooltip>
       
                       <MDBTooltip wrapperProps={{ size: "sm" , color: "danger" }} wrapperClass="me-1 mb-2"
@@ -95,13 +98,21 @@ function CartItem() {
                     <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
                       <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
                         <MDBBtn className="px-3 me-2">
-                          <MDBIcon fas icon="minus" />
+                          <MDBIcon fas icon="minus" 
+                          onClick={()=>{
+                            dispatch(DecreaseQuantitityItem(item.id));                                              
+                         }}
+                          />
                         </MDBBtn>
-      
-                        <MDBInput defaultValue={1} min={0} type="number" label="Quantity" />
+                        
+                        <MDBInput defaultValue={item.totalQuantity} min={0} type="text" label="Quantity" />
       
                         <MDBBtn className="px-3 ms-2">
-                          <MDBIcon fas icon="plus" />
+                          <MDBIcon fas icon="plus"
+                          onClick={()=>{
+                            dispatch(IncreaseQuantityItem(item.id));                                              
+                         }}
+                          />
                         </MDBBtn>
                       </div>
       
@@ -110,53 +121,14 @@ function CartItem() {
                       </p>
                     </MDBCol>
                   </MDBRow>
-                 
-      
+                   
                 </MDBCardBody>
 
-
-
-
                 ))
-
-
             }
-
-
-
-         
-         
-
-
-
-            
-           
-             {/*
-             
-               {
-                SolarProductList.map((product) =>{
-                  return  <CartProduct
-                  
-                  key={product.id} 
-                  id={product.id}
-                  
-                  
-                  />
                       
-                  
-                })
-               }
-             
-             */}
-             
-                  
-                
-             
-  
-              <hr className="my-4" />
-  
-             
-            
+                <hr className="my-4" />
+                          
           </MDBCard>
   
           <MDBCard className="mb-4">
